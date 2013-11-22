@@ -1,0 +1,41 @@
+
+Name:               SetOperations
+Version:            0.1.0.0
+Synopsis:           
+Author:             Maksymilian Owsianny
+Maintainer:         Maksymilian.Owsianny+SetOperations@gmail.com
+Bug-Reports:        https://github.com/MaxOw/SetOperations/issues
+Copyright:          (c) 2013 Maksymilian Owsianny
+Category:           Graphics
+Build-Type:         Simple
+Stability:          Experimental
+Cabal-Version:      >= 1.8
+
+Source-Repository head
+  Type:             git
+  Location:         https://github.com/MaxOw/SetOperations.git
+
+Library
+  Hs-Source-Dirs:   src
+  Exposed-Modules:  Graphics.SetOperations
+  Other-Modules:    Graphics.Determinant,
+                    Graphics.Polyhedra,
+                    Graphics.Math
+
+  Build-Depends:    base >=4.5, 
+                    containers, vector,
+                    vect, Vec
+
+Test-Suite SetOperations-Tests
+  Type:             exitcode-stdio-1.0
+  Hs-Source-Dirs:   tests, src
+  Main-Is:          MainTestSuite.hs
+
+  Build-Depends:    base >=4.5, 
+                    containers, vector,
+                    vect, Vec,
+
+                    QuickCheck,
+                    test-framework,
+                    test-framework-quickcheck2
+
